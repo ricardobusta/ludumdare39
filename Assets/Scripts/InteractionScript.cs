@@ -7,30 +7,51 @@ public class InteractionScript : MonoBehaviour {
 
   GameManager gm;
 
+  [HideInInspector]
+  public TalkScript talk;
+  [HideInInspector]
+  public TouchScript touch;
+  [HideInInspector]
+  public LookScript look;
+
+  public float menuHeight;
+
+
   private void Start() {
     gm = GameManager.instance;
+
+    talk = GetComponent<TalkScript>();
+    if (talk == null) {
+      Debug.LogError(name + " must have a Talk Script");
+    }
+    touch = GetComponent<TouchScript>();
+    if (touch == null) {
+      Debug.LogError(name + " must have a Touch Script");
+    }
+    look = GetComponent<LookScript>();
+    if (look == null) {
+      Debug.LogError(name + " must have a Look Script");
+    }
   }
 
   public void Interact() {
-    Debug.Log(name + " interacted");
-
-    gm.player.MoveTo(interactionPos);
+    if (gm.interactiveMenu.gameObject.activeSelf) {
+      return;
+    }
+    StartCoroutine(OpenMenu());
   }
 
-  public virtual void ActionTalk() {
-
-  }
-
-  public virtual void ActionTouch() {
-
-  }
-
-  public virtual void ActionLook() {
-
+  IEnumerator OpenMenu() {
+    gm.interactiveMenu.Activate(this);
+    yield return null;
   }
 
   private void Update() {
     if (gm.movingToInteraction == this && !gm.player.move) {
     }
+  }
+
+  public Vector3 MenuPosition() {
+    return transform.position + (Vector3.up * menuHeight * 0.1f);
   }
 }

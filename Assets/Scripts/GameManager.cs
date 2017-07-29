@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
   public Character player;
   public InteractionScript movingToInteraction;
 
+  public InteractiveMenu interactiveMenu { get; private set; }
+
   [Header("Ref")]
   public Slider powerSlider;
   public Slider happySlider;
@@ -26,6 +28,10 @@ public class GameManager : MonoBehaviour {
   void Start() {
     happy = 0.5f;
     power = 0.5f;
+
+    if (interactiveMenu == null) {
+      interactiveMenu = FindObjectOfType<InteractiveMenu>();
+    }
   }
 
   void Update() {
@@ -37,5 +43,9 @@ public class GameManager : MonoBehaviour {
   void UpdateSliders() {
     powerSlider.value = power;
     happySlider.value = happy;
+  }
+
+  void CloseInteractiveMenu() {
+
   }
 }

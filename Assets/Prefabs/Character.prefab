@@ -40,6 +40,9 @@ GameObject:
   - component: {fileID: 114299127909927112}
   - component: {fileID: 114968045745570950}
   - component: {fileID: 114658652236631270}
+  - component: {fileID: 114371163908948332}
+  - component: {fileID: 114756119363392544}
+  - component: {fileID: 114555954211214036}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -110,6 +113,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0170e4511795fe844b2181faf5558c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114371163908948332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1773835224726394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291681fc0015ddc4290aa5ea3bbe33a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114555954211214036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1773835224726394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed58a720357d298489db1f27937cba54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114616662449429136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +157,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a15169f0c657c4da6aa3e12b0f4ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPos: {x: 0, y: 0, z: 0}
+  talk: {fileID: 0}
+  touch: {fileID: 0}
+  look: {fileID: 0}
+  menuHeight: 2
+--- !u!114 &114756119363392544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1773835224726394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 935b6094c2bdc1d40b32191bad148e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114968045745570950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,9 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b43f30158f0abd42886eccfa1434c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destiny: {x: 0.316, y: 0, z: -0.06402835}
   speed: 1
-  move: 0
+  direction: 0
 --- !u!212 &212449770297236550
 SpriteRenderer:
   m_ObjectHideFlags: 1
