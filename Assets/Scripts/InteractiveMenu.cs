@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InteractiveMenu : MonoBehaviour {
 
@@ -10,6 +11,10 @@ public class InteractiveMenu : MonoBehaviour {
 
   InteractionScript script = null;
   RectTransform canvasTransform;
+
+  public Button talkButton;
+  public Button touchButton;
+  public Button lookButton;
 
 
   private void Start() {
@@ -30,26 +35,33 @@ public class InteractiveMenu : MonoBehaviour {
     gameObject.SetActive(true);
 
     transform.localPosition = WorldToCanvas(script.MenuPosition());
+    gm.closeMenusButton.gameObject.SetActive(true);
+
     Animator anim = GetComponent<Animator>();
     anim.SetTrigger("Toggle");
   }
 
   public void Deactivate() {
     ClearButtons();
-    ClearScript();
+    script = null;
+  }
+
+  public void ShowButtonsAfterAnim() {
+    talkButton.enabled = true;
+    lookButton.enabled = true;
+    touchButton.enabled = true;
+    gm.closeMenusButton.enabled = true;
   }
 
   public void ClearButtons() {
+    gm.closeMenusButton.enabled = false;
     Animator anim = GetComponent<Animator>();
     anim.SetTrigger("Toggle");
   }
 
-  public void ClearScript() {
-    script = null;
-  }
-
-  public void SetInactive() {
+  public void SetInactiveAfterAnim() {
     gameObject.SetActive(false);
+    gm.closeMenusButton.gameObject.SetActive(false);
   }
 
   public void Talk() {
@@ -58,7 +70,7 @@ public class InteractiveMenu : MonoBehaviour {
     }
     ClearButtons();
     script.talk.Action();
-    ClearScript();
+    script = null;
   }
 
   public void Touch() {
@@ -67,7 +79,7 @@ public class InteractiveMenu : MonoBehaviour {
     }
     ClearButtons();
     script.touch.Action();
-    ClearScript();
+    script = null;
   }
 
   public void Look() {
@@ -76,12 +88,11 @@ public class InteractiveMenu : MonoBehaviour {
     }
     ClearButtons();
     script.look.Action();
-    ClearScript();
+    script = null;
   }
 
   Vector2 WorldToCanvas(Vector3 pos) {
     Vector2 p = Camera.main.WorldToViewportPoint(pos) - (0.5f * Vector3.one);
-    Debug.Log(p + " " + canvasTransform.sizeDelta);
     return Vector2.Scale(p, canvasTransform.sizeDelta);
   }
 }

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour {
 
   public InteractiveMenu interactiveMenu { get; private set; }
 
+  public Button closeMenusButton;
+
   [Header("Ref")]
   public Slider powerSlider;
   public Slider happySlider;
@@ -23,6 +25,10 @@ public class GameManager : MonoBehaviour {
     if (player == null) {
       Debug.LogError(name + " player must not be null");
     }
+    if (closeMenusButton == null) {
+      Debug.LogError(name + " must have a close menus button");
+    }
+    closeMenusButton.gameObject.SetActive(false);
   }
 
   void Start() {
@@ -45,7 +51,9 @@ public class GameManager : MonoBehaviour {
     happySlider.value = happy;
   }
 
-  void CloseInteractiveMenu() {
-
+  public void CloseMenus() {
+    if (interactiveMenu.gameObject.activeSelf) {
+      interactiveMenu.Deactivate();
+    }
   }
 }

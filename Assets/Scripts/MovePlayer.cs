@@ -19,7 +19,6 @@ public class MovePlayer : MonoBehaviour {
     // Check for 2D object blocking ray
     RaycastHit2D hit2D = Physics2D.GetRayIntersection(ray);
     if (hit2D.collider != null) {
-      Debug.Log("hit 2D");
       return;
     }
 
@@ -28,7 +27,6 @@ public class MovePlayer : MonoBehaviour {
     RaycastHit hitInfo;
     bool hit = col.Raycast(ray, out hitInfo, 1000.0f);
     if (hit) {
-      Debug.Log("Walk");
       gm.movingToInteraction = null;
       gm.player.MoveTo(hitInfo.point);
     }
