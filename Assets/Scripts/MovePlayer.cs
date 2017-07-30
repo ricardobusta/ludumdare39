@@ -32,7 +32,7 @@ public class MovePlayer : MonoBehaviour {
     bool hit = col.Raycast(ray, out hitInfo, 1000.0f);
     if (hit) {
       gm.movingToInteraction = null;
-      gm.player.MoveTo(hitInfo.point);
+      gm.player.MoveTo(hitInfo.point, null);
     }
   }
 }

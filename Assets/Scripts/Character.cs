@@ -36,7 +36,6 @@ public class Character : MonoBehaviour {
         direction = (int)Mathf.Sign(destiny.x - pos.x);
       } else {
         transform.position = pos;
-        gm.movingToInteraction = null;
         move = false;
       }
       sprite.flipX = direction > 0;
@@ -51,8 +50,9 @@ public class Character : MonoBehaviour {
 #endif
   }
 
-  public void MoveTo(Vector3 position) {
+  public void MoveTo(Vector3 position, InteractionScript interaction) {
     destiny = position;
+    gm.movingToInteraction = interaction;
     move = true;
   }
 }
