@@ -1589,6 +1589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e1b9907730c4f40b160dd4ddbac76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionPos: {x: 0, y: 0, z: 0}
+  direction: 1
 --- !u!1 &775714019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2108,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: caf9938f27d28464a9023d346afc4d27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a3d7768f9d75a428be31a115bc4694, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2381,7 +2383,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 509da1b83b2b7db4fafdbc3bfed5fc7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 517e2acb7912e9a40b4b3deeddf53283, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -11,6 +11,7 @@ public class Character : MonoBehaviour {
   public int direction;
   SpriteRenderer sprite;
   GameManager gm;
+  int moveEndDirection;
 
   private void Start() {
     gm = GameManager.instance;
@@ -37,6 +38,9 @@ public class Character : MonoBehaviour {
       } else {
         transform.position = pos;
         move = false;
+        if (moveEndDirection != 0) {
+          direction = moveEndDirection;
+        }
       }
       sprite.flipX = direction > 0;
     }
@@ -50,9 +54,10 @@ public class Character : MonoBehaviour {
 #endif
   }
 
-  public void MoveTo(Vector3 position, InteractionScript interaction) {
+  public void MoveTo(Vector3 position, InteractionScript interaction, int endDirection = 0) {
     destiny = position;
     gm.movingToInteraction = interaction;
     move = true;
+    moveEndDirection = endDirection;
   }
 }

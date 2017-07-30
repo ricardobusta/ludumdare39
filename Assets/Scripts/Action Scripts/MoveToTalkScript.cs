@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveToTalkScript : TalkScript {
+  public Vector3 interactionPos;
+  public int direction;
+
   public override void Action() {
-    gm.player.MoveTo(interaction.interactionPos, interaction);
+    gm.player.MoveTo(interactionPos, interaction, direction);
   }
 
   private void Update() {

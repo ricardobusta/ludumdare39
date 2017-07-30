@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractionScript : MonoBehaviour {
-  public Vector3 interactionPos;
-
   GameManager gm;
 
   [HideInInspector]
