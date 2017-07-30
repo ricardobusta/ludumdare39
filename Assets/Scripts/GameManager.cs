@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
   public float power;
-  public float happy;
 
   public static GameManager instance { get; private set; }
   public Character player;
@@ -18,7 +17,6 @@ public class GameManager : MonoBehaviour {
 
   [Header("Ref")]
   public Slider powerSlider;
-  public Slider happySlider;
 
   private void Awake() {
     instance = this;
@@ -32,8 +30,7 @@ public class GameManager : MonoBehaviour {
   }
 
   void Start() {
-    happy = 0.5f;
-    power = 0.5f;
+    power = 1;
 
     if (interactiveMenu == null) {
       interactiveMenu = FindObjectOfType<InteractiveMenu>();
@@ -48,7 +45,6 @@ public class GameManager : MonoBehaviour {
 
   void UpdateSliders() {
     powerSlider.value = power;
-    happySlider.value = happy;
   }
 
   public void CloseMenus() {

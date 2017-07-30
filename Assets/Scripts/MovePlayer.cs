@@ -14,6 +14,10 @@ public class MovePlayer : MonoBehaviour {
   }
 
   private void OnMouseDown() {
+    if (gm.closeMenusButton.gameObject.activeSelf) {
+      return;
+    }
+
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
     // Check for 2D object blocking ray

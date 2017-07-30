@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1407e0d341a5bef4c960ccdd936763a1
+timeCreated: 1501378672
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MyScriptFont
+  fontNames:
+  - MyScriptFont
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
