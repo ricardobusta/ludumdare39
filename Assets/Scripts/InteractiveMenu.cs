@@ -7,11 +7,7 @@ using UnityEngine.UI;
 public class InteractiveMenu : MonoBehaviour {
 
   GameManager gm;
-  EventSystem eventSystem;
-
   InteractionScript script = null;
-  RectTransform canvasTransform;
-
   public Button talkButton;
   public Button touchButton;
   public Button lookButton;
@@ -19,11 +15,6 @@ public class InteractiveMenu : MonoBehaviour {
 
   private void Start() {
     gm = GameManager.instance;
-    eventSystem = FindObjectOfType<EventSystem>();
-    canvasTransform = FindObjectOfType<Canvas>().GetComponent<RectTransform>();
-    if (canvasTransform == null) {
-      Debug.Log("Must have a Canvas");
-    }
     gameObject.SetActive(false);
   }
 
@@ -34,7 +25,7 @@ public class InteractiveMenu : MonoBehaviour {
     script = s;
     gameObject.SetActive(true);
 
-    transform.localPosition = WorldToCanvas(script.MenuPosition());
+    transform.localPosition = Utils.WorldToCanvas(script.MenuPosition());
     gm.closeMenusButton.gameObject.SetActive(true);
 
     Animator anim = GetComponent<Animator>();
@@ -89,10 +80,5 @@ public class InteractiveMenu : MonoBehaviour {
     ClearButtons();
     script.look.Action();
     script = null;
-  }
-
-  Vector2 WorldToCanvas(Vector3 pos) {
-    Vector2 p = Camera.main.WorldToViewportPoint(pos) - (0.5f * Vector3.one);
-    return Vector2.Scale(p, canvasTransform.sizeDelta);
   }
 }

@@ -33,7 +33,7 @@ public class InteractionScript : MonoBehaviour {
   }
 
   public void Interact() {
-    if (gm.interactiveMenu.gameObject.activeSelf) {
+    if (gm.interactiveMenu.gameObject.activeSelf || gm.allScreenButton.gameObject.activeSelf) {
       return;
     }
     StartCoroutine(OpenMenu());

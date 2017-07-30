@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour {
   public Character player;
   public InteractionScript movingToInteraction;
 
-  public InteractiveMenu interactiveMenu { get; private set; }
-
-  public Button closeMenusButton;
-
   [Header("Ref")]
   public Slider powerSlider;
+  public Button closeMenusButton;
+  public InteractiveMenu interactiveMenu;
+  public SpeechBubble speechBubble;
+  public Button allScreenButton;
+  public bool waitingUserInput { get; private set; }
 
   private void Awake() {
     instance = this;
@@ -27,13 +28,23 @@ public class GameManager : MonoBehaviour {
       Debug.LogError(name + " must have a close menus button");
     }
     closeMenusButton.gameObject.SetActive(false);
+    if (allScreenButton == null) {
+      Debug.LogError(name + " must have an all screen button");
+    }
+    allScreenButton.gameObject.SetActive(false);
+
+    speechBubble.gameObject.SetActive(false);
+
+    waitingUserInput = true;
   }
 
   void Start() {
+    Utils.Initialize();
+
     power = 1;
 
     if (interactiveMenu == null) {
-      interactiveMenu = FindObjectOfType<InteractiveMenu>();
+      Debug.LogError("Must have an interactive menu");
     }
   }
 
@@ -51,5 +62,15 @@ public class GameManager : MonoBehaviour {
     if (interactiveMenu.gameObject.activeSelf) {
       interactiveMenu.Deactivate();
     }
+  }
+
+  public void ResetUserInput() {
+    waitingUserInput = true;
+    Debug.Log("Reset");
+  }
+
+  public void AllScreenButton() {
+    waitingUserInput = false;
+    Debug.Log("All Button Press");
   }
 }

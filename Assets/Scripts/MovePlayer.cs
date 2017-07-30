@@ -14,7 +14,7 @@ public class MovePlayer : MonoBehaviour {
   }
 
   private void OnMouseDown() {
-    if (gm.closeMenusButton.gameObject.activeSelf) {
+    if (gm.closeMenusButton.gameObject.activeSelf || gm.allScreenButton.gameObject.activeSelf) {
       return;
     }
 

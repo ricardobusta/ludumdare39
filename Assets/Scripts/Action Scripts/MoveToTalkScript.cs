@@ -11,9 +11,9 @@ public class MoveToTalkScript : TalkScript {
   }
 
   private void Update() {
-    Debug.Log(gm.movingToInteraction + " " + gm.player.move);
     if (gm.movingToInteraction != null && gm.movingToInteraction.gameObject == gameObject && gm.player.move == false) {
       gm.movingToInteraction = null;
+      StartCoroutine(TalkRoutine());
     }
   }
 }

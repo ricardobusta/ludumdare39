@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Speech Balloon
+  m_Controller: {fileID: 9100000, guid: e164464e5ee64054984664ccc11450ed, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dad25d3e5da2bc24d90afefd348e4e7c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c1fd22a172481934e9221861db4aa73f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b6971fc974352a243bf1bbd79ae9e3c7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 89a413205b7f9d04292ff25400e6159b, type: 2}

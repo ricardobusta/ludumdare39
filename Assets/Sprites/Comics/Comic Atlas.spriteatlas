@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Comic Atlas
+  m_EditorData:
+    textureSettings:
+      anisoLevel: 1
+      compressionQuality: 100
+      maxTextureSize: 8192
+      textureCompression: 2
+      colorSpace: 1
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 1
+    platformSettings: []
+    packingParameters:
+      paddingPower: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    packedHash:
+      serializedVersion: 2
+      Hash: 0bbf490443b0efb785b69e20d8a0c1bb
+    variantMultiplier: 1
+    bindAsDefault: 1
+    finalFormat: 29
+    hashString: 0bbf490443b0efb785b69e20d8a0c1bb
+    totalSpriteSurfaceArea: 18662400
+    packables:
+    - {fileID: 2800000, guid: 3a19f11a257246541adb53634fff6920, type: 3}
+    - {fileID: 2800000, guid: a852bf37b7592274e89cedee5788e4ec, type: 3}
+    - {fileID: 2800000, guid: 8ad4c6b866eaeaa44b4758aca3ea3424, type: 3}
+    - {fileID: 2800000, guid: e6d68b5ae5d6f6f4aa99d0efe7cbb864, type: 3}
+    - {fileID: 2800000, guid: 53044647b84fb5540a924b19a938d260, type: 3}
+    - {fileID: 2800000, guid: 782262973220f264d941caa15e3b46d9, type: 3}
+    - {fileID: 2800000, guid: ccfdafb522aee28468a3fed48c5a6e5e, type: 3}
+    - {fileID: 2800000, guid: 52f0ce68f4659ae43abefb2f6c5d3ae4, type: 3}
+    - {fileID: 2800000, guid: 946c42b86828ded42ae24ed8cd5b7d81, type: 3}
+    packedSpriteRenderDataKeys:
+    - 8ad4c6b866eaeaa44b4758aca3ea3424: 21300000
+    - a852bf37b7592274e89cedee5788e4ec: 21300000
+    - 3a19f11a257246541adb53634fff6920: 21300000
+    - ccfdafb522aee28468a3fed48c5a6e5e: 21300000
+    - 782262973220f264d941caa15e3b46d9: 21300000
+    - 53044647b84fb5540a924b19a938d260: 21300000
+    - e6d68b5ae5d6f6f4aa99d0efe7cbb864: 21300000
+    - 946c42b86828ded42ae24ed8cd5b7d81: 21300000
+    - 52f0ce68f4659ae43abefb2f6c5d3ae4: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8ad4c6b866eaeaa44b4758aca3ea3424, type: 3}
+  - {fileID: 21300000, guid: a852bf37b7592274e89cedee5788e4ec, type: 3}
+  - {fileID: 21300000, guid: 3a19f11a257246541adb53634fff6920, type: 3}
+  - {fileID: 21300000, guid: ccfdafb522aee28468a3fed48c5a6e5e, type: 3}
+  - {fileID: 21300000, guid: 782262973220f264d941caa15e3b46d9, type: 3}
+  - {fileID: 21300000, guid: 53044647b84fb5540a924b19a938d260, type: 3}
+  - {fileID: 21300000, guid: e6d68b5ae5d6f6f4aa99d0efe7cbb864, type: 3}
+  - {fileID: 21300000, guid: 946c42b86828ded42ae24ed8cd5b7d81, type: 3}
+  - {fileID: 21300000, guid: 52f0ce68f4659ae43abefb2f6c5d3ae4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - t3
+  - t2
+  - t1
+  - t7
+  - t6
+  - t5
+  - t4
+  - t9
+  - t8
+  m_Tag: Comic Atlas
+  m_IsVariant: 0
