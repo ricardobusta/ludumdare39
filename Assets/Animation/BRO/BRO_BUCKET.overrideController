@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: BRO_BUCKET
+  m_Controller: {fileID: 9100000, guid: f559a74af1d3da943b02eb033a5219a7, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c9c17e0431abeb640b83ad50e41b8274, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b37d0e8d9b5583a458b0de1ca267cbb7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2ab3414eb86f2b64580596856bc0b5fe, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 532513e84c9cb2f4ab3ef484ce41f44e, type: 2}

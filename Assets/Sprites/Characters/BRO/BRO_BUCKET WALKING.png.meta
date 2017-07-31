@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 6b1b13075894fd245bc07fbf03c96c76
-timeCreated: 1501499098
+guid: d23db4965f092514db9f937d6406d4b7
+timeCreated: 1501505825
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BRO-CORRE_0
-    21300002: BRO-CORRE_1
-    21300004: BRO-CORRE_2
-    21300006: BRO-CORRE_3
-    21300008: BRO-CORRE_4
-    21300010: BRO-CORRE_5
-    21300012: BRO-CORRE_6
-    21300014: BRO-CORRE_7
+    21300000: bro-carrega-balde-corre_0
+    21300002: bro-carrega-balde-corre_1
+    21300004: bro-carrega-balde-corre_2
+    21300006: bro-carrega-balde-corre_3
+    21300008: bro-carrega-balde-corre_4
+    21300010: bro-carrega-balde-corre_5
+    21300012: bro-carrega-balde-corre_6
+    21300014: bro-carrega-balde-corre_7
+    21300016: BRO_BUCKET WALKING_0
+    21300018: BRO_BUCKET WALKING_1
+    21300020: BRO_BUCKET WALKING_2
+    21300022: BRO_BUCKET WALKING_3
+    21300024: BRO_BUCKET WALKING_4
+    21300026: BRO_BUCKET WALKING_5
+    21300028: BRO_BUCKET WALKING_6
+    21300030: BRO_BUCKET WALKING_7
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -107,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BRO-CORRE_0
+      name: BRO_BUCKET WALKING_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,7 +129,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_1
+      name: BRO_BUCKET WALKING_1
       rect:
         serializedVersion: 2
         x: 372
@@ -135,7 +143,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_2
+      name: BRO_BUCKET WALKING_2
       rect:
         serializedVersion: 2
         x: 744
@@ -149,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_3
+      name: BRO_BUCKET WALKING_3
       rect:
         serializedVersion: 2
         x: 1116
@@ -163,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_4
+      name: BRO_BUCKET WALKING_4
       rect:
         serializedVersion: 2
         x: 1488
@@ -177,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_5
+      name: BRO_BUCKET WALKING_5
       rect:
         serializedVersion: 2
         x: 1860
@@ -191,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_6
+      name: BRO_BUCKET WALKING_6
       rect:
         serializedVersion: 2
         x: 2232
@@ -205,7 +213,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE_7
+      name: BRO_BUCKET WALKING_7
       rect:
         serializedVersion: 2
         x: 2604

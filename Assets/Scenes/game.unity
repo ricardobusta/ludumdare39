@@ -266,6 +266,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1045621485}
   character: {fileID: 777155434}
+  defaultController: {fileID: 9100000, guid: f559a74af1d3da943b02eb033a5219a7, type: 2}
+  mocinhaController: {fileID: 22100000, guid: 556a9e41d90788548a9ac49aaa58f9b3, type: 2}
+  cervejaController: {fileID: 22100000, guid: 035fd41c1af4d0c4d89c9f16e43be415, type: 2}
+  bucketController: {fileID: 22100000, guid: c783d6178399a2c45aabd10737d52535, type: 2}
 --- !u!114 &85148147 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114658652236631270, guid: be22e52af969d5f4297f70885419ff2d,
@@ -1426,12 +1430,15 @@ MonoBehaviour:
   power: 0
   player: {fileID: 777155434}
   movingToInteraction: {fileID: 0}
+  language: 0
   powerSlider: {fileID: 1596358514}
   closeMenusButton: {fileID: 2077273310}
   interactiveMenu: {fileID: 805714650}
   speechBubble: {fileID: 1725230695}
   allScreenButton: {fileID: 1945690688}
+  BroAnim: {fileID: 85148143}
   Bro: {fileID: 85148147}
+  MocinhaBebada: {fileID: 1006336825}
 --- !u!4 &529626513
 Transform:
   m_ObjectHideFlags: 0
@@ -1872,7 +1879,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4625f1c7b2f433f46b77993ddddd0543,
+      objectReference: {fileID: 21300016, guid: 76e7336de474be54c97f0f8ba2e104f2,
         type: 3}
     - target: {fileID: 212449770297236550, guid: be22e52af969d5f4297f70885419ff2d,
         type: 2}
@@ -1922,6 +1929,21 @@ Prefab:
     - target: {fileID: 95043183746102648, guid: be22e52af969d5f4297f70885419ff2d,
         type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212449770297236550, guid: be22e52af969d5f4297f70885419ff2d,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 212449770297236550, guid: be22e52af969d5f4297f70885419ff2d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.56700003
+      objectReference: {fileID: 0}
+    - target: {fileID: 212449770297236550, guid: be22e52af969d5f4297f70885419ff2d,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2010,11 +2032,11 @@ Prefab:
         type: 3}
     - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.8699999
       objectReference: {fileID: 0}
     - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.8699999
       objectReference: {fileID: 0}
     - target: {fileID: 95043183746102648, guid: be22e52af969d5f4297f70885419ff2d,
         type: 2}
@@ -2067,10 +2089,20 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.17747739
       objectReference: {fileID: 0}
+    - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.87
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114555954211214036, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1006336825 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114658652236631270, guid: be22e52af969d5f4297f70885419ff2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1006336824}
+  m_Script: {fileID: 11500000, guid: f0a15169f0c657c4da6aa3e12b0f4ff7, type: 3}
 --- !u!95 &1045621485 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95043183746102648, guid: be22e52af969d5f4297f70885419ff2d,

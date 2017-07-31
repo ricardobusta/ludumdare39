@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ebc6ec98ab677ec45ba66ef894154ddc
-timeCreated: 1501499106
+timeCreated: 1501505812
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,14 @@ TextureImporter:
     21300010: BRO-CORRE-CERVEJA_5
     21300012: BRO-CORRE-CERVEJA_6
     21300014: BRO-CORRE-CERVEJA_7
+    21300016: BRO_BEER WALKING_0
+    21300018: BRO_BEER WALKING_1
+    21300020: BRO_BEER WALKING_2
+    21300022: BRO_BEER WALKING_3
+    21300024: BRO_BEER WALKING_4
+    21300026: BRO_BEER WALKING_5
+    21300028: BRO_BEER WALKING_6
+    21300030: BRO_BEER WALKING_7
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -107,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_0
+      name: BRO_BEER WALKING_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,7 +129,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_1
+      name: BRO_BEER WALKING_1
       rect:
         serializedVersion: 2
         x: 372
@@ -135,7 +143,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_2
+      name: BRO_BEER WALKING_2
       rect:
         serializedVersion: 2
         x: 744
@@ -149,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_3
+      name: BRO_BEER WALKING_3
       rect:
         serializedVersion: 2
         x: 1116
@@ -163,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_4
+      name: BRO_BEER WALKING_4
       rect:
         serializedVersion: 2
         x: 1488
@@ -177,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_5
+      name: BRO_BEER WALKING_5
       rect:
         serializedVersion: 2
         x: 1860
@@ -191,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_6
+      name: BRO_BEER WALKING_6
       rect:
         serializedVersion: 2
         x: 2232
@@ -205,7 +213,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CORRE-CERVEJA_7
+      name: BRO_BEER WALKING_7
       rect:
         serializedVersion: 2
         x: 2604

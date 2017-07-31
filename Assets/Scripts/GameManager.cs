@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour {
   public Image fadeImage { get; private set; }
 
   [Header("Characters")]
+  public PlayerMovingAnimation BroAnim;
   public InteractionScript Bro;
+  public InteractionScript MocinhaBebada;
 
   private void Awake() {
     instance = this;

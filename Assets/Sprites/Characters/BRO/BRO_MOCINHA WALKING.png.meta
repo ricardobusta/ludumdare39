@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 1549d8b8643234448b4ce86c2095bfc7
-timeCreated: 1501451396
+guid: 2679bdf2c8e16fd419150c9f8c722deb
+timeCreated: 1501505843
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BRO-CARREGA-MOCINHA-ANDA_0
-    21300002: BRO-CARREGA-MOCINHA-ANDA_1
-    21300004: BRO-CARREGA-MOCINHA-ANDA_2
-    21300006: BRO-CARREGA-MOCINHA-ANDA_3
-    21300008: BRO-CARREGA-MOCINHA-ANDA_4
-    21300010: BRO-CARREGA-MOCINHA-ANDA_5
-    21300012: BRO-CARREGA-MOCINHA-ANDA_6
-    21300014: BRO-CARREGA-MOCINHA-ANDA_7
+    21300000: bro-carrega-mocinha2-correndo_0
+    21300002: bro-carrega-mocinha2-correndo_1
+    21300004: bro-carrega-mocinha2-correndo_2
+    21300006: bro-carrega-mocinha2-correndo_3
+    21300008: bro-carrega-mocinha2-correndo_4
+    21300010: bro-carrega-mocinha2-correndo_5
+    21300012: bro-carrega-mocinha2-correndo_6
+    21300014: bro-carrega-mocinha2-correndo_7
+    21300016: BRO_MOCINHA WALKING_0
+    21300018: BRO_MOCINHA WALKING_1
+    21300020: BRO_MOCINHA WALKING_2
+    21300022: BRO_MOCINHA WALKING_3
+    21300024: BRO_MOCINHA WALKING_4
+    21300026: BRO_MOCINHA WALKING_5
+    21300028: BRO_MOCINHA WALKING_6
+    21300030: BRO_MOCINHA WALKING_7
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -107,12 +115,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_0
+      name: BRO_MOCINHA WALKING_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,12 +129,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_1
+      name: BRO_MOCINHA WALKING_1
       rect:
         serializedVersion: 2
-        x: 340
+        x: 372
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -135,12 +143,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_2
+      name: BRO_MOCINHA WALKING_2
       rect:
         serializedVersion: 2
-        x: 680
+        x: 744
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -149,12 +157,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_3
+      name: BRO_MOCINHA WALKING_3
       rect:
         serializedVersion: 2
-        x: 1020
+        x: 1116
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,12 +171,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_4
+      name: BRO_MOCINHA WALKING_4
       rect:
         serializedVersion: 2
-        x: 1360
+        x: 1488
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,12 +185,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_5
+      name: BRO_MOCINHA WALKING_5
       rect:
         serializedVersion: 2
-        x: 1700
+        x: 1860
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -191,12 +199,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_6
+      name: BRO_MOCINHA WALKING_6
       rect:
         serializedVersion: 2
-        x: 2040
+        x: 2232
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,12 +213,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: BRO-CARREGA-MOCINHA-ANDA_7
+      name: BRO_MOCINHA WALKING_7
       rect:
         serializedVersion: 2
-        x: 2380
+        x: 2604
         y: 0
-        width: 340
+        width: 372
         height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
