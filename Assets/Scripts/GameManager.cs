@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour {
   public InteractionScript MocinhaBebada;
   public InteractionScript Bartender;
   public InteractionScript MocinhaBartender;
+  public InteractionScript Mocinho;
+  public InteractionScript MocinhoBebado;
+  public InteractionScript Bucket;
 
   [Header("Inventory")]
   public GameObject mocinhaItem;
@@ -77,6 +80,9 @@ public class GameManager : MonoBehaviour {
     if (interactiveMenu == null) {
       Debug.LogError("Must have an interactive menu");
     }
+
+    MocinhaBartender.gameObject.SetActive(false);
+    MocinhoBebado.gameObject.SetActive(false);
   }
 
   void Update() {
@@ -141,10 +147,11 @@ public class GameManager : MonoBehaviour {
   }
 
   public IEnumerator Talk(string text, InteractionScript interaction) {
+    Debug.Log("Talk Call " + text);
     speechBubble.Show(text, interaction);
     yield return WaitUserInput();
     speechBubble.Hide();
-    while (speechBubble.active) {
+    while (speechBubble.gameObject.activeSelf) {
       yield return new WaitForEndOfFrame();
     }
   }

@@ -29,7 +29,7 @@ public class InteractiveMenu : MonoBehaviour {
     gm.closeMenusButton.gameObject.SetActive(true);
 
     Animator anim = GetComponent<Animator>();
-    anim.SetTrigger("Toggle");
+    anim.SetTrigger("ToggleOn");
   }
 
   public void Deactivate() {
@@ -47,7 +47,7 @@ public class InteractiveMenu : MonoBehaviour {
   public void ClearButtons() {
     gm.closeMenusButton.enabled = false;
     Animator anim = GetComponent<Animator>();
-    anim.SetTrigger("Toggle");
+    anim.SetTrigger("ToggleOff");
   }
 
   public void SetInactiveAfterAnim() {

@@ -13,7 +13,7 @@ public class TouchScript : MonoBehaviour {
     StartCoroutine(TouchRoutine());
   }
 
-  public virtual IEnumerator TouchRoutine() {
+  protected virtual IEnumerator TouchRoutine() {
     gm.StartTalking();
     string talk;
     talk = (gm.language == GameManager.Language.PT_BR) ? "Não quero tocar nisso..." : "I don't want to touch that...";

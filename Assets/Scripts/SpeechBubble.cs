@@ -7,7 +7,6 @@ public class SpeechBubble : MonoBehaviour {
   public Animator animator;
   public Text text;
   public Button button;
-  public bool active { get; private set; }
 
   private void Start() {
     if (animator == null) {
@@ -19,16 +18,15 @@ public class SpeechBubble : MonoBehaviour {
   }
 
   public void Show(string s, InteractionScript chara) {
-    active = true;
     text.text = s;
     gameObject.SetActive(true);
     gameObject.transform.localPosition = chara.MenuPosition();
-    animator.SetTrigger("Toggle");
+    animator.SetTrigger("ToggleOn");
   }
 
   public void Hide() {
     button.interactable = false;
-    animator.SetTrigger("Toggle");
+    animator.SetTrigger("ToggleOff");
   }
 
   public void Activate() {
@@ -36,6 +34,6 @@ public class SpeechBubble : MonoBehaviour {
   }
 
   public void Deactivate() {
-    active = false;
+    gameObject.SetActive(false);
   }
 }

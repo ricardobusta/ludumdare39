@@ -9,7 +9,7 @@ public class PlayerMovingAnimation : MonoBehaviour {
 
   public RuntimeAnimatorController defaultController;
   public RuntimeAnimatorController mocinhaController;
-  public RuntimeAnimatorController cervejaController;
+  public RuntimeAnimatorController beerController;
   public RuntimeAnimatorController bucketController;
 
   void Update() {

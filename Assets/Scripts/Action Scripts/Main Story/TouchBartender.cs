@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BartenderTouch : MoveToTouchScript {
+public class TouchBartender : MoveToTouchScript {
 
   public override void Action() {
     if (gm.mocinhaItem.activeSelf) {
@@ -12,7 +12,7 @@ public class BartenderTouch : MoveToTouchScript {
     }
   }
 
-  public override IEnumerator TouchRoutine() {
+  protected override IEnumerator TouchRoutine() {
     gm.StartTalking();
     if (gm.mocinhaItem.activeSelf) {
       yield return gm.Talk("Excuse-me, sir...", gm.Bro);
