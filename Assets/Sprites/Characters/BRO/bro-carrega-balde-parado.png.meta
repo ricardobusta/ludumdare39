@@ -1,12 +1,17 @@
 fileFormatVersion: 2
-guid: 782262973220f264d941caa15e3b46d9
-timeCreated: 1501500873
+guid: 20bfcc20c80d8734b990291abe3dfe50
+timeCreated: 1501499083
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: t6_0
-    21300002: t6_1
-    21300004: t6_2
+    21300000: bro-carrega-balde-parado_0
+    21300002: bro-carrega-balde-parado_1
+    21300004: bro-carrega-balde-parado_2
+    21300006: bro-carrega-balde-parado_3
+    21300008: bro-carrega-balde-parado_4
+    21300010: bro-carrega-balde-parado_5
+    21300012: bro-carrega-balde-parado_6
+    21300014: bro-carrega-balde-parado_7
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -48,7 +53,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -102,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: t6_0
+      name: bro-carrega-balde-parado_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 1080
+        width: 340
+        height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,13 +121,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: t6_1
+      name: bro-carrega-balde-parado_1
       rect:
         serializedVersion: 2
-        x: 640
+        x: 340
         y: 0
-        width: 640
-        height: 1080
+        width: 340
+        height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,13 +135,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: t6_2
+      name: bro-carrega-balde-parado_2
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 680
         y: 0
-        width: 640
-        height: 1080
+        width: 340
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bro-carrega-balde-parado_3
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 340
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bro-carrega-balde-parado_4
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 340
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bro-carrega-balde-parado_5
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 340
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bro-carrega-balde-parado_6
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 340
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bro-carrega-balde-parado_7
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 340
+        height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

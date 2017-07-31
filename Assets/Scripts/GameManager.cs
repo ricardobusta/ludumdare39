@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
   public static GameManager instance { get; private set; }
   public Character player;
-  public InteractionScript movingToInteraction;
+  public GameObject movingToInteraction;
 
   [Header("Ref")]
   public Slider powerSlider;
@@ -17,7 +17,11 @@ public class GameManager : MonoBehaviour {
   public InteractiveMenu interactiveMenu;
   public SpeechBubble speechBubble;
   public Button allScreenButton;
-  public bool waitingUserInput { get; private set; }
+  private bool waitingUserInput;
+  public Image fadeImage { get; private set; }
+
+  [Header("Characters")]
+  public InteractionScript Bro;
 
   private void Awake() {
     instance = this;
@@ -64,13 +68,66 @@ public class GameManager : MonoBehaviour {
     }
   }
 
-  public void ResetUserInput() {
+  public IEnumerator WaitUserInput() {
+    ResetUserInput();
+    while (waitingUserInput) {
+      yield return new WaitForEndOfFrame();
+    }
+  }
+
+  void ResetUserInput() {
     waitingUserInput = true;
     Debug.Log("Reset");
+  }
+
+  public IEnumerator FadeIn() {
+    const float timeTotal = 3;
+    float time = 0;
+    Color c = Color.white;
+    while (time < timeTotal) {
+      time += Time.deltaTime;
+      c.a = 1 - time / timeTotal;
+      fadeImage.color = c;
+      yield return new WaitForEndOfFrame();
+    }
+    c.a = 0;
+    fadeImage.color = c;
+  }
+
+  public IEnumerator FadeOut() {
+    const float timeTotal = 3;
+    float time = 0;
+    Color c = Color.white;
+    while (time < timeTotal) {
+      time += Time.deltaTime;
+      c.a = time / timeTotal;
+      fadeImage.color = c;
+      yield return new WaitForEndOfFrame();
+    }
+    c.a = 1;
+    fadeImage.color = c;
   }
 
   public void AllScreenButton() {
     waitingUserInput = false;
     Debug.Log("All Button Press");
+  }
+
+  public IEnumerator Talk(string text, InteractionScript interaction) {
+    speechBubble.Show(text, interaction);
+    yield return WaitUserInput();
+    speechBubble.Hide();
+    while (speechBubble.active) {
+      yield return new WaitForEndOfFrame();
+    }
+  }
+
+  public void StartTalking() {
+    allScreenButton.gameObject.SetActive(true);
+    speechBubble.Deactivate();
+  }
+
+  public void StopTalking() {
+    allScreenButton.gameObject.SetActive(false);
   }
 }

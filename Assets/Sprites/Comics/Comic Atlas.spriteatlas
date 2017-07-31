@@ -26,11 +26,11 @@ SpriteAtlas:
       enableTightPacking: 1
     packedHash:
       serializedVersion: 2
-      Hash: 0bbf490443b0efb785b69e20d8a0c1bb
+      Hash: e6d3ee73d2829a47c8af3f49ec21ab46
     variantMultiplier: 1
     bindAsDefault: 1
     finalFormat: 29
-    hashString: 0bbf490443b0efb785b69e20d8a0c1bb
+    hashString: e6d3ee73d2829a47c8af3f49ec21ab46
     totalSpriteSurfaceArea: 18662400
     packables:
     - {fileID: 2800000, guid: 3a19f11a257246541adb53634fff6920, type: 3}
@@ -43,35 +43,89 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 52f0ce68f4659ae43abefb2f6c5d3ae4, type: 3}
     - {fileID: 2800000, guid: 946c42b86828ded42ae24ed8cd5b7d81, type: 3}
     packedSpriteRenderDataKeys:
+    - 8ad4c6b866eaeaa44b4758aca3ea3424: 21300002
     - 8ad4c6b866eaeaa44b4758aca3ea3424: 21300000
+    - 8ad4c6b866eaeaa44b4758aca3ea3424: 21300004
     - a852bf37b7592274e89cedee5788e4ec: 21300000
+    - a852bf37b7592274e89cedee5788e4ec: 21300002
+    - a852bf37b7592274e89cedee5788e4ec: 21300004
+    - 3a19f11a257246541adb53634fff6920: 21300004
+    - 3a19f11a257246541adb53634fff6920: 21300002
     - 3a19f11a257246541adb53634fff6920: 21300000
+    - ccfdafb522aee28468a3fed48c5a6e5e: 21300002
     - ccfdafb522aee28468a3fed48c5a6e5e: 21300000
+    - ccfdafb522aee28468a3fed48c5a6e5e: 21300004
     - 782262973220f264d941caa15e3b46d9: 21300000
+    - 782262973220f264d941caa15e3b46d9: 21300002
+    - 782262973220f264d941caa15e3b46d9: 21300004
+    - 53044647b84fb5540a924b19a938d260: 21300004
+    - 53044647b84fb5540a924b19a938d260: 21300002
     - 53044647b84fb5540a924b19a938d260: 21300000
+    - e6d68b5ae5d6f6f4aa99d0efe7cbb864: 21300004
     - e6d68b5ae5d6f6f4aa99d0efe7cbb864: 21300000
+    - e6d68b5ae5d6f6f4aa99d0efe7cbb864: 21300002
+    - 946c42b86828ded42ae24ed8cd5b7d81: 21300004
+    - 946c42b86828ded42ae24ed8cd5b7d81: 21300002
     - 946c42b86828ded42ae24ed8cd5b7d81: 21300000
+    - 52f0ce68f4659ae43abefb2f6c5d3ae4: 21300004
     - 52f0ce68f4659ae43abefb2f6c5d3ae4: 21300000
+    - 52f0ce68f4659ae43abefb2f6c5d3ae4: 21300002
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300002, guid: 8ad4c6b866eaeaa44b4758aca3ea3424, type: 3}
   - {fileID: 21300000, guid: 8ad4c6b866eaeaa44b4758aca3ea3424, type: 3}
+  - {fileID: 21300004, guid: 8ad4c6b866eaeaa44b4758aca3ea3424, type: 3}
   - {fileID: 21300000, guid: a852bf37b7592274e89cedee5788e4ec, type: 3}
+  - {fileID: 21300002, guid: a852bf37b7592274e89cedee5788e4ec, type: 3}
+  - {fileID: 21300004, guid: a852bf37b7592274e89cedee5788e4ec, type: 3}
+  - {fileID: 21300004, guid: 3a19f11a257246541adb53634fff6920, type: 3}
+  - {fileID: 21300002, guid: 3a19f11a257246541adb53634fff6920, type: 3}
   - {fileID: 21300000, guid: 3a19f11a257246541adb53634fff6920, type: 3}
+  - {fileID: 21300002, guid: ccfdafb522aee28468a3fed48c5a6e5e, type: 3}
   - {fileID: 21300000, guid: ccfdafb522aee28468a3fed48c5a6e5e, type: 3}
+  - {fileID: 21300004, guid: ccfdafb522aee28468a3fed48c5a6e5e, type: 3}
   - {fileID: 21300000, guid: 782262973220f264d941caa15e3b46d9, type: 3}
+  - {fileID: 21300002, guid: 782262973220f264d941caa15e3b46d9, type: 3}
+  - {fileID: 21300004, guid: 782262973220f264d941caa15e3b46d9, type: 3}
+  - {fileID: 21300004, guid: 53044647b84fb5540a924b19a938d260, type: 3}
+  - {fileID: 21300002, guid: 53044647b84fb5540a924b19a938d260, type: 3}
   - {fileID: 21300000, guid: 53044647b84fb5540a924b19a938d260, type: 3}
+  - {fileID: 21300004, guid: e6d68b5ae5d6f6f4aa99d0efe7cbb864, type: 3}
   - {fileID: 21300000, guid: e6d68b5ae5d6f6f4aa99d0efe7cbb864, type: 3}
+  - {fileID: 21300002, guid: e6d68b5ae5d6f6f4aa99d0efe7cbb864, type: 3}
+  - {fileID: 21300004, guid: 946c42b86828ded42ae24ed8cd5b7d81, type: 3}
+  - {fileID: 21300002, guid: 946c42b86828ded42ae24ed8cd5b7d81, type: 3}
   - {fileID: 21300000, guid: 946c42b86828ded42ae24ed8cd5b7d81, type: 3}
+  - {fileID: 21300004, guid: 52f0ce68f4659ae43abefb2f6c5d3ae4, type: 3}
   - {fileID: 21300000, guid: 52f0ce68f4659ae43abefb2f6c5d3ae4, type: 3}
+  - {fileID: 21300002, guid: 52f0ce68f4659ae43abefb2f6c5d3ae4, type: 3}
   m_PackedSpriteNamesToIndex:
-  - t3
-  - t2
-  - t1
-  - t7
-  - t6
-  - t5
-  - t4
-  - t9
-  - t8
+  - t3_1
+  - t3_0
+  - t3_2
+  - t2_0
+  - t2_1
+  - t2_2
+  - t1_2
+  - t1_1
+  - t1_0
+  - t7_1
+  - t7_0
+  - t7_2
+  - t6_0
+  - t6_1
+  - t6_2
+  - t5_2
+  - t5_1
+  - t5_0
+  - t4_2
+  - t4_0
+  - t4_1
+  - t9_2
+  - t9_1
+  - t9_0
+  - t8_2
+  - t8_0
+  - t8_1
   m_Tag: Comic Atlas
   m_IsVariant: 0

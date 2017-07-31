@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class TalkScript : MonoBehaviour {
   protected GameManager gm;
-  protected InteractionScript interaction;
 
   private void Start() {
     gm = GameManager.instance;
-    interaction = GetComponent<InteractionScript>();
   }
 
   public virtual void Action() {
@@ -16,33 +14,10 @@ public class TalkScript : MonoBehaviour {
   }
 
   protected virtual IEnumerator TalkRoutine() {
-    StartTalking();
-    yield return Talk("Talk t talk 1", interaction);
-    yield return Talk("Talk t talk 2", interaction);
-    yield return Talk("Talk t talk 3", interaction);
-    StopTalking();
-  }
-
-  protected IEnumerator Talk(string text, InteractionScript interaction) {
-    gm.speechBubble.Show(text, interaction);
-    gm.ResetUserInput();
-    while (gm.waitingUserInput) {
-      Debug.Log("wait1" + gm.waitingUserInput);
-      yield return new WaitForEndOfFrame();
-    }
-    gm.speechBubble.Hide();
-    while (gm.speechBubble.active) {
-      Debug.Log("wait2" + gm.speechBubble.active);
-      yield return new WaitForEndOfFrame();
-    }
-  }
-
-  protected void StartTalking() {
-    gm.allScreenButton.gameObject.SetActive(true);
-    gm.speechBubble.Deactivate();
-  }
-
-  protected void StopTalking() {
-    gm.allScreenButton.gameObject.SetActive(false);
+    gm.StartTalking();
+    yield return gm.Talk("Talk talk 1", gm.Bro);
+    yield return gm.Talk("Talk talk 2", gm.Bro);
+    yield return gm.Talk("Talk talk 3", gm.Bro);
+    gm.StopTalking();
   }
 }

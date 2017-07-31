@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToTalkScript : TalkScript {
+public class MoveToTouchScript : TouchScript {
   public Vector3 interactionPos;
   public int direction;
 
@@ -13,7 +13,7 @@ public class MoveToTalkScript : TalkScript {
   private void Update() {
     if (gm != null && gm.movingToInteraction != null && gm.movingToInteraction == gameObject && gm.player.move == false) {
       gm.movingToInteraction = null;
-      StartCoroutine(TalkRoutine());
+      StartCoroutine(TouchRoutine());
     }
   }
 }

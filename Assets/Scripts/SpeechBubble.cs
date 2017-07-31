@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SpeechBubble : MonoBehaviour {
-
   public Animator animator;
   public Text text;
   public Button button;
@@ -23,6 +22,7 @@ public class SpeechBubble : MonoBehaviour {
     active = true;
     text.text = s;
     gameObject.SetActive(true);
+    gameObject.transform.localPosition = chara.MenuPosition();
     animator.SetTrigger("Toggle");
   }
 

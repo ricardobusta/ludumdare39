@@ -266,6 +266,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1045621485}
   character: {fileID: 777155434}
+--- !u!114 &85148147 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114658652236631270, guid: be22e52af969d5f4297f70885419ff2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 777155433}
+  m_Script: {fileID: 11500000, guid: f0a15169f0c657c4da6aa3e12b0f4ff7, type: 3}
 --- !u!1 &120103565
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,12 +607,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &189295560 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114072458216956272, guid: 66c145b89b920ce40b670b623c19d44e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1511329502}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &220516518
 Prefab:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 511672801}
   - component: {fileID: 511672800}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,10 +1237,10 @@ RectTransform:
   m_Father: {fileID: 445549698}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 887.0314, y: 225}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -102.5, y: 86.5}
+  m_SizeDelta: {x: 205, y: 173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511672800
 MonoBehaviour:
@@ -1254,14 +1254,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.86952627, g: 0.9191176, b: 0.020274673, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 89e53b6148c1fad469b99b53b968e2e1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1431,6 +1431,7 @@ MonoBehaviour:
   interactiveMenu: {fileID: 805714650}
   speechBubble: {fileID: 1725230695}
   allScreenButton: {fileID: 1945690688}
+  Bro: {fileID: 85148147}
 --- !u!4 &529626513
 Transform:
   m_ObjectHideFlags: 0
@@ -1833,7 +1834,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.361
+      value: -0.165
       objectReference: {fileID: 0}
     - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1841,7 +1842,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.185
+      value: -0.285
       objectReference: {fileID: 0}
     - target: {fileID: 4196750731418012, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1994,7 +1995,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1773835224726394, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
       propertyPath: m_Name
-      value: Mocinha
+      value: Mocinha Bebada
       objectReference: {fileID: 0}
     - target: {fileID: 95043183746102648, guid: be22e52af969d5f4297f70885419ff2d,
         type: 2}
@@ -2066,7 +2067,8 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.17747739
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114555954211214036, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be22e52af969d5f4297f70885419ff2d, type: 2}
   m_IsPrefabParent: 0
 --- !u!95 &1045621485 stripped
@@ -2617,7 +2619,7 @@ Prefab:
     - target: {fileID: 224098917382297616, guid: 66c145b89b920ce40b670b623c19d44e,
         type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.0003573465
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224098917382297616, guid: 66c145b89b920ce40b670b623c19d44e,
         type: 2}
@@ -2647,12 +2649,12 @@ Prefab:
     - target: {fileID: 224098917382297616, guid: 66c145b89b920ce40b670b623c19d44e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -293
+      value: -104
       objectReference: {fileID: 0}
     - target: {fileID: 224098917382297616, guid: 66c145b89b920ce40b670b623c19d44e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 251.00027
+      value: 156
       objectReference: {fileID: 0}
     - target: {fileID: 224098917382297616, guid: 66c145b89b920ce40b670b623c19d44e,
         type: 2}
@@ -2698,9 +2700,52 @@ Prefab:
       propertyPath: m_Name
       value: Speech Bubble
       objectReference: {fileID: 0}
+    - target: {fileID: 114429417665252670, guid: 66c145b89b920ce40b670b623c19d44e,
+        type: 2}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1945690688}
+    - target: {fileID: 224647624015816824, guid: 66c145b89b920ce40b670b623c19d44e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -141
+      objectReference: {fileID: 0}
+    - target: {fileID: 224383715160795758, guid: 66c145b89b920ce40b670b623c19d44e,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224383715160795758, guid: 66c145b89b920ce40b670b623c19d44e,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224383715160795758, guid: 66c145b89b920ce40b670b623c19d44e,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66c145b89b920ce40b670b623c19d44e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1537821343 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1773835224726394, guid: be22e52af969d5f4297f70885419ff2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1006336824}
+--- !u!114 &1537821344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1537821343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e604efc6527b5194ab259239e8ae32d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPos: {x: 0.075, y: 0, z: 0.145}
+  direction: 1
 --- !u!1 &1596358512
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,35 +2830,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1725230692 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1164506823568816, guid: 66c145b89b920ce40b670b623c19d44e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1511329502}
 --- !u!224 &1725230693 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224098917382297616, guid: 66c145b89b920ce40b670b623c19d44e,
     type: 2}
   m_PrefabInternal: {fileID: 1511329502}
---- !u!95 &1725230694 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95660788851561250, guid: 66c145b89b920ce40b670b623c19d44e,
+--- !u!114 &1725230695 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114429417665252670, guid: 66c145b89b920ce40b670b623c19d44e,
     type: 2}
   m_PrefabInternal: {fileID: 1511329502}
---- !u!114 &1725230695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1725230692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8df33c79b6d971e44b9eca875af8c763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1725230694}
-  text: {fileID: 189295560}
-  button: {fileID: 1945690688}
 --- !u!1001 &1902118251
 Prefab:
   m_ObjectHideFlags: 0

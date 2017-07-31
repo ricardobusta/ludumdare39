@@ -44,12 +44,7 @@ public class InteractionScript : MonoBehaviour {
     yield return null;
   }
 
-  private void Update() {
-    if (gm.movingToInteraction == this && !gm.player.move) {
-    }
-  }
-
-  public Vector3 MenuPosition() {
-    return transform.position + (Vector3.up * menuHeight * 0.1f);
+  public Vector2 MenuPosition() {
+    return Utils.WorldToCanvas(transform.position + (Vector3.up * menuHeight * 0.1f));
   }
 }

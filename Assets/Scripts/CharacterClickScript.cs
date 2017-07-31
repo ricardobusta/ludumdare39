@@ -6,15 +6,12 @@ using UnityEngine;
 public class CharacterClickScript : MonoBehaviour {
 
   InteractionScript interaction;
-  GameManager gm;
 
   void Start() {
     if (transform.parent == null) {
       Debug.LogError(name + " must have parent Interaction");
       return;
     }
-
-    gm = GameManager.instance;
 
     interaction = transform.parent.GetComponent<InteractionScript>();
     if (interaction == null) {

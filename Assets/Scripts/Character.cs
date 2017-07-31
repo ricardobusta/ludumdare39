@@ -54,7 +54,7 @@ public class Character : MonoBehaviour {
 #endif
   }
 
-  public void MoveTo(Vector3 position, InteractionScript interaction, int endDirection = 0) {
+  public void MoveTo(Vector3 position, GameObject interaction, int endDirection = 0) {
     destiny = position;
     gm.movingToInteraction = interaction;
     move = true;

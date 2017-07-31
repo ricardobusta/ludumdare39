@@ -25,7 +25,7 @@ public class InteractiveMenu : MonoBehaviour {
     script = s;
     gameObject.SetActive(true);
 
-    transform.localPosition = Utils.WorldToCanvas(script.MenuPosition());
+    transform.localPosition = script.MenuPosition();
     gm.closeMenusButton.gameObject.SetActive(true);
 
     Animator anim = GetComponent<Animator>();
