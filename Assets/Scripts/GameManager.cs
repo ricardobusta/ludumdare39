@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
   public SpeechBubble speechBubble;
   public Button allScreenButton;
   private bool waitingUserInput;
-  public Image fadeImage { get; private set; }
+  public Image fadeImage;
 
   [Header("Characters")]
   public PlayerMovingAnimation BroAnim;
@@ -35,12 +35,19 @@ public class GameManager : MonoBehaviour {
   public InteractionScript MocinhaBartender;
   public InteractionScript Mocinho;
   public InteractionScript MocinhoBebado;
+  public InteractionScript MocinhoMolhado;
+  public InteractionScript MocinhoDancando;
   public InteractionScript Bucket;
+  public InteractionScript Nina;
 
   [Header("Inventory")]
   public GameObject mocinhaItem;
   public GameObject beerItem;
   public GameObject bucketItem;
+
+  [Header("Comics")]
+  public ComicManager[] cm;
+  public ComicManager[] intro;
 
   private void Awake() {
     instance = this;
@@ -81,8 +88,22 @@ public class GameManager : MonoBehaviour {
       Debug.LogError("Must have an interactive menu");
     }
 
+    fadeImage.gameObject.SetActive(false);
+
     MocinhaBartender.gameObject.SetActive(false);
     MocinhoBebado.gameObject.SetActive(false);
+    MocinhoMolhado.gameObject.SetActive(false);
+    Nina.gameObject.SetActive(false);
+    MocinhoDancando.gameObject.SetActive(false);
+
+    foreach (ComicManager c in cm) {
+      c.gameObject.SetActive(true);
+    }
+    foreach (ComicManager c in intro) {
+      c.gameObject.SetActive(true);
+    }
+
+    StartCoroutine(IntroRoutine());
   }
 
   void Update() {
@@ -114,27 +135,33 @@ public class GameManager : MonoBehaviour {
   }
 
   public IEnumerator FadeIn() {
-    const float timeTotal = 3;
+    Debug.Log("Fade In");
+    const float timeTotal = 0.5f;
     float time = 0;
     Color c = Color.white;
     while (time < timeTotal) {
       time += Time.deltaTime;
       c.a = 1 - time / timeTotal;
+      Debug.Log(c.a);
       fadeImage.color = c;
       yield return new WaitForEndOfFrame();
     }
     c.a = 0;
     fadeImage.color = c;
+    fadeImage.gameObject.SetActive(false);
   }
 
   public IEnumerator FadeOut() {
-    const float timeTotal = 3;
+    Debug.Log("Fade Out");
+    fadeImage.gameObject.SetActive(true);
+    const float timeTotal = 0.5f;
     float time = 0;
     Color c = Color.white;
     while (time < timeTotal) {
       time += Time.deltaTime;
       c.a = time / timeTotal;
       fadeImage.color = c;
+      Debug.Log(c.a);
       yield return new WaitForEndOfFrame();
     }
     c.a = 1;
@@ -163,5 +190,20 @@ public class GameManager : MonoBehaviour {
 
   public void StopTalking() {
     allScreenButton.gameObject.SetActive(false);
+  }
+
+  IEnumerator IntroRoutine() {
+    allScreenButton.gameObject.SetActive(true);
+    allScreenButton.interactable = true;
+    fadeImage.gameObject.SetActive(true);
+    fadeImage.color = Color.white;
+    yield return new WaitForEndOfFrame();
+    yield return intro[0].ShowComic();
+    yield return intro[1].ShowComic();
+    yield return intro[2].ShowComic();
+    yield return intro[3].ShowComic();
+    yield return intro[4].ShowComic();
+    allScreenButton.gameObject.SetActive(false);
+    yield return FadeIn();
   }
 }

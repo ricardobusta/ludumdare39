@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchMocinhoBebado : MoveToTouchScript {
-  public ComicManager comic5;
+public class TalkNina : MoveToTalkScript {
+  bool talked = false;
 
-  protected override IEnumerator TouchRoutine() {
+  public ComicManager comic6;
+
+  protected override IEnumerator TalkRoutine() {
     gm.StartTalking();
-    if (gm.bucketItem.activeSelf) {
-      yield return gm.Talk("Uhhh. What?", gm.MocinhoBebado);
-      yield return gm.Talk("Think fast!", gm.Bro);
+    if (!talked) {
+      yield return gm.Talk("Hey, can you give me a hand with him, please?", gm.Bro);
+      yield return gm.Talk("...", gm.Nina);
       yield return gm.FadeOut();
-      yield return comic5.ShowComic();
+      yield return comic6.ShowComic();
       gm.BroAnim.animator.runtimeAnimatorController = gm.BroAnim.defaultController;
       gm.bucketItem.SetActive(false);
 
@@ -19,9 +21,9 @@ public class TouchMocinhoBebado : MoveToTouchScript {
       gm.MocinhoMolhado.gameObject.SetActive(true);
       gm.MocinhoBebado.transform.position = new Vector3(1000, 0, 0);
       yield return gm.FadeIn();
-      gm.MocinhoBebado.gameObject.SetActive(false);
     } else {
-      yield return gm.Talk("He's too nervous for a hug.", gm.Bro);
+      yield return gm.Talk("Thanks!", gm.Bro);
+      yield return gm.Talk("...", gm.Nina);
     }
     gm.StopTalking();
   }

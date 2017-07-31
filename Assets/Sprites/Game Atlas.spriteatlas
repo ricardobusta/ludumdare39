@@ -31,14 +31,14 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
     packedHash:
       serializedVersion: 2
-      Hash: d57f58490dea739102bfb2b1cca0c3a2
+      Hash: d2c87efe96735d149bb3b1604c890dec
     variantMultiplier: 1
     bindAsDefault: 1
     finalFormat: 29
-    hashString: d57f58490dea739102bfb2b1cca0c3a2
+    hashString: d2c87efe96735d149bb3b1604c890dec
     totalSpriteSurfaceArea: 0
     packables: []
     packedSpriteRenderDataKeys: []
