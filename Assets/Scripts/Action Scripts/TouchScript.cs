@@ -15,7 +15,9 @@ public class TouchScript : MonoBehaviour {
 
   public virtual IEnumerator TouchRoutine() {
     gm.StartTalking();
-    yield return gm.Talk("Lorem Ipsum", gm.Bro);
+    string talk;
+    talk = (gm.language == GameManager.Language.PT_BR) ? "Não quero tocar nisso..." : "I don't want to touch that...";
+    yield return gm.Talk(talk, gm.Bro);
     gm.StopTalking();
   }
 }

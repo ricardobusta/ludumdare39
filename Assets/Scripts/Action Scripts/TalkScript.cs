@@ -15,9 +15,9 @@ public class TalkScript : MonoBehaviour {
 
   protected virtual IEnumerator TalkRoutine() {
     gm.StartTalking();
-    yield return gm.Talk("Talk talk 1", gm.Bro);
-    yield return gm.Talk("Talk talk 2", gm.Bro);
-    yield return gm.Talk("Talk talk 3", gm.Bro);
+    string talk;
+    talk = (gm.language == GameManager.Language.PT_BR) ? "Não sei o que falar..." : "I don't know what to talk...";
+    yield return gm.Talk(talk, gm.Bro);
     gm.StopTalking();
   }
 }

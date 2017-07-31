@@ -20,4 +20,8 @@ public class TitleScreenManager : MonoBehaviour {
     AsyncOperation async = SceneManager.LoadSceneAsync("Game");
     yield return async;
   }
+
+  public void SetLanguage(string language) {
+    PlayerPrefs.SetString("language", language);
+  }
 }

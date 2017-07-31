@@ -11,6 +11,13 @@ public class GameManager : MonoBehaviour {
   public Character player;
   public GameObject movingToInteraction;
 
+  public enum Language {
+    EN_US,
+    PT_BR
+  };
+
+  public Language language;
+
   [Header("Ref")]
   public Slider powerSlider;
   public Button closeMenusButton;
@@ -25,6 +32,17 @@ public class GameManager : MonoBehaviour {
 
   private void Awake() {
     instance = this;
+
+    string lang = PlayerPrefs.GetString("language", "EN_US");
+    switch (lang) {
+      case "PT_BR":
+        language = Language.PT_BR;
+        break;
+      default:
+        language = Language.EN_US;
+        break;
+    }
+
     if (player == null) {
       Debug.LogError(name + " player must not be null");
     }

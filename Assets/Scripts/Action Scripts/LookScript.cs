@@ -15,7 +15,9 @@ public class LookScript : MonoBehaviour {
 
   public virtual IEnumerator LookRoutine() {
     gm.StartTalking();
-    yield return gm.Talk("Lorem Ipsum", gm.Bro);
+    string talk;
+    talk = (gm.language == GameManager.Language.PT_BR) ? "Parece algo maneiro..." : "Looks something nice...";
+    yield return gm.Talk(talk, gm.Bro);
     gm.StopTalking();
   }
 }
