@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour {
   public PlayerMovingAnimation BroAnim;
   public InteractionScript Bro;
   public InteractionScript MocinhaBebada;
+  public InteractionScript Bartender;
+  public InteractionScript MocinhaBartender;
+
+  [Header("Inventory")]
+  public GameObject mocinhaItem;
+  public GameObject beerItem;
+  public GameObject bucketItem;
 
   private void Awake() {
     instance = this;

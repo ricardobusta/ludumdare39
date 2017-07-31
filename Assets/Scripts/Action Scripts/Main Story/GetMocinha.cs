@@ -9,6 +9,8 @@ public class GetMocinha : MoveToTouchScript {
     yield return gm.Talk("Come with me", gm.Bro);
     gm.MocinhaBebada.gameObject.SetActive(false);
     gm.BroAnim.animator.runtimeAnimatorController = gm.BroAnim.mocinhaController;
+    gm.mocinhaItem.SetActive(true);
+    gm.player.MoveTo(gm.MocinhaBebada.transform.position, gm.MocinhaBebada.gameObject, -1);
     gm.StopTalking();
   }
 }
