@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TitleScreenManager : MonoBehaviour {
 
   public GameObject LoadingScreen;
+  public GameObject creditsScreen;
 
   private void Start() {
     LoadingScreen.SetActive(false);
@@ -23,5 +24,13 @@ public class TitleScreenManager : MonoBehaviour {
 
   public void SetLanguage(string language) {
     PlayerPrefs.SetString("language", language);
+  }
+
+  public void OpenURL(string url) {
+    Application.OpenURL(url);
+  }
+
+  public void ToggleCredits() {
+    creditsScreen.SetActive(!creditsScreen.activeSelf);
   }
 }

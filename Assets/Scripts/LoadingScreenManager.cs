@@ -11,9 +11,9 @@ public class LoadingScreenManager : MonoBehaviour {
   AsyncOperation async;
 
   void Start() {
-    foreach (Image logo in logos) {
-      logo.gameObject.SetActive(false);
-    }
+    //foreach (Image logo in logos) {
+    //logo.gameObject.SetActive(false);
+    //}
     StartCoroutine(LoadScene());
   }
 
@@ -26,25 +26,26 @@ public class LoadingScreenManager : MonoBehaviour {
 
   IEnumerator LogoScene() {
     const float totalTime = 3;
-
-    foreach (Image logo in logos) {
-      time = 0;
-      logo.gameObject.SetActive(true);
-      Color c = logo.color;
-      while (time < totalTime) {
-        time += Time.deltaTime;
-        c.a = time / totalTime;
+    Color c = Color.white;
+    time = 0;
+    while (time < totalTime) {
+      time += Time.deltaTime;
+      c.a = time / totalTime;
+      foreach (Image logo in logos) {
         logo.color = c;
-        yield return new WaitForEndOfFrame();
       }
-      time = 0;
-      while (time < totalTime) {
-        time += Time.deltaTime;
-        c.a = 1 - (time / totalTime);
-        logo.color = c;
-        yield return new WaitForEndOfFrame();
-      }
+      yield return new WaitForEndOfFrame();
     }
+    time = 0;
+    while (time < totalTime) {
+      time += Time.deltaTime;
+      c.a = 1 - (time / totalTime);
+      foreach (Image logo in logos) {
+        logo.color = c;
+      }
+      yield return new WaitForEndOfFrame();
+    }
+
     async.allowSceneActivation = true;
   }
 

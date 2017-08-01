@@ -7,7 +7,7 @@ public class Character : MonoBehaviour {
 
   Vector3 destiny;
   public float speed = 1;
-  public bool move { get; private set; }
+  public bool move;
   public int direction;
   SpriteRenderer sprite;
   GameManager gm;

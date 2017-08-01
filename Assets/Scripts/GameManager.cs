@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+  const float totalPower = 240;
   public float power;
 
   public static GameManager instance { get; private set; }
@@ -39,6 +41,10 @@ public class GameManager : MonoBehaviour {
   public InteractionScript MocinhoDancando;
   public InteractionScript Bucket;
   public InteractionScript Nina;
+  public InteractionScript MimiTormento;
+  public InteractionScript MimiEntediada;
+  public InteractionScript MimiFeliz;
+  public InteractionScript DJ;
 
   [Header("Inventory")]
   public GameObject mocinhaItem;
@@ -48,6 +54,8 @@ public class GameManager : MonoBehaviour {
   [Header("Comics")]
   public ComicManager[] cm;
   public ComicManager[] intro;
+
+  bool started = false;
 
   private void Awake() {
     instance = this;
@@ -82,7 +90,7 @@ public class GameManager : MonoBehaviour {
   void Start() {
     Utils.Initialize();
 
-    power = 1;
+    power = totalPower;
 
     if (interactiveMenu == null) {
       Debug.LogError("Must have an interactive menu");
@@ -95,6 +103,8 @@ public class GameManager : MonoBehaviour {
     MocinhoMolhado.gameObject.SetActive(false);
     Nina.gameObject.SetActive(false);
     MocinhoDancando.gameObject.SetActive(false);
+    MimiEntediada.gameObject.SetActive(false);
+    MimiFeliz.gameObject.SetActive(false);
 
     foreach (ComicManager c in cm) {
       c.gameObject.SetActive(true);
@@ -107,13 +117,20 @@ public class GameManager : MonoBehaviour {
   }
 
   void Update() {
-    power -= 0.1f * Time.deltaTime;
+    if (!started) {
+      return;
+    }
+    power -= Time.deltaTime;
 
     UpdateSliders();
   }
 
   void UpdateSliders() {
-    powerSlider.value = power;
+    powerSlider.value = power / totalPower;
+
+    if (power <= 0) {
+      StartCoroutine(GameOverRoutine());
+    }
   }
 
   public void CloseMenus() {
@@ -135,6 +152,7 @@ public class GameManager : MonoBehaviour {
   }
 
   public IEnumerator FadeIn() {
+    started = true;
     Debug.Log("Fade In");
     const float timeTotal = 0.5f;
     float time = 0;
@@ -152,6 +170,7 @@ public class GameManager : MonoBehaviour {
   }
 
   public IEnumerator FadeOut() {
+    started = false;
     Debug.Log("Fade Out");
     fadeImage.gameObject.SetActive(true);
     const float timeTotal = 0.5f;
@@ -205,5 +224,11 @@ public class GameManager : MonoBehaviour {
     yield return intro[4].ShowComic();
     allScreenButton.gameObject.SetActive(false);
     yield return FadeIn();
+    started = true;
+  }
+
+  public IEnumerator GameOverRoutine() {
+    yield return FadeOut();
+    SceneManager.LoadScene("Game Over Screen");
   }
 }
