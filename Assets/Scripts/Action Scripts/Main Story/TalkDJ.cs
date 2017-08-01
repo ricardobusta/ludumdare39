@@ -12,6 +12,10 @@ public class TalkDJ : MoveToTalkScript {
       yield return gm.FadeOut();
       gm.MimiEntediada.gameObject.SetActive(false);
       gm.MimiFeliz.gameObject.SetActive(true);
+      AudioSource asor = FindObjectOfType<AudioSource>();
+      if (asor != null) {
+        asor.pitch = 1.6f;
+      }
       yield return gm.FadeIn();
     } else {
       yield return gm.Talk("Hey!", gm.Bro);
