@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -129.6}
-  m_SizeDelta: {x: 0, y: -259.2}
+  m_SizeDelta: {x: -120, y: -259.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127358498
 MonoBehaviour:
@@ -183,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1407e0d341a5bef4c960ccdd936763a1, type: 3}
-    m_FontSize: 112
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 6
@@ -194,7 +194,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Thanks for playing the LD39 edition!
+  m_Text: 'That''s the end! As you push your partner, they started interacting and
+    his anxiety is over. Now, only the future will tell what will happen with them!
+
+    Thanks
+    for playing this Ludum Dare 39 game!'
 --- !u!222 &127358499
 CanvasRenderer:
   m_ObjectHideFlags: 0
