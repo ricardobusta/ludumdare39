@@ -229,6 +229,6 @@ public class GameManager : MonoBehaviour {
 
   public IEnumerator GameOverRoutine() {
     yield return FadeOut();
-    SceneManager.LoadScene("Game Over Screen");
+    SceneManager.LoadScene("GameOverScreen");
   }
 }

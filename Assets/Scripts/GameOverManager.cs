@@ -9,6 +9,6 @@ public class GameOverManager : MonoBehaviour {
   }
 
   public void BackToTitle() {
-    SceneManager.LoadScene("Title Screen");
+    SceneManager.LoadScene("TitleScreen");
   }
 }

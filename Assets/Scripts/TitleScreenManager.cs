@@ -18,7 +18,7 @@ public class TitleScreenManager : MonoBehaviour {
 
   IEnumerator StartGameRoutine() {
     LoadingScreen.SetActive(true);
-    AsyncOperation async = SceneManager.LoadSceneAsync("Game");
+    AsyncOperation async = SceneManager.LoadSceneAsync("Gameplay");
     yield return async;
   }
 
