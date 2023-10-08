@@ -18,14 +18,14 @@ public class LoadingScreenManager : MonoBehaviour {
   }
 
   IEnumerator LoadScene() {
-    async = SceneManager.LoadSceneAsync("Title Screen");
+    async = SceneManager.LoadSceneAsync("TitleScreen");
     async.allowSceneActivation = false;
     StartCoroutine(LogoScene());
     yield return async;
   }
 
   IEnumerator LogoScene() {
-    const float totalTime = 3;
+    const float totalTime = 2;
     Color c = Color.white;
     time = 0;
     while (time < totalTime) {
